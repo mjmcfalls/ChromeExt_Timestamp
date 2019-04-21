@@ -1,0 +1,22 @@
+{
+    "name": "Add Timestamp",
+    "version": "1.0",
+    "description": "Context menu to add timestamp to a input field",
+    "permissions": ["storage",
+                    "contextMenus",
+                    "activeTab"
+                ],
+    "background": {
+      "scripts": ["background.js",
+                    "js/moment.js"
+                ],
+      "persistent": false
+    },  
+    "content_scripts": [{
+        "matches": ["<all_urls>"],
+        "all_frames": true,
+        "match_about_blank": true,
+        "js": ["content.js"]
+      }],
+    "manifest_version": 2
+  }
