@@ -1,11 +1,12 @@
 // import './js/moment.js';
-var format = "YYYYMMDDTHH:mm:ss"
+var format = "YYYY-MM-DDTHH:mm:ss";
+var separator = "-";
 function onClickHandler(info, tab) {
     if (info.menuItemId == "timestamp201904") {
     //   console.log("Clicked " + info.menuItemId);
         var text = moment().format();
         // console.log(todayIso);
-        chrome.tabs.sendMessage(tab.id, {"act":"insert", "text":text}, {frameId: info.frameId || 0});
+        chrome.tabs.sendMessage(tab.id, {"act":"insert", "text":text, "separator": separator}, {frameId: info.frameId || 0});
   };
 };
 

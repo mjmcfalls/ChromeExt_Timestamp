@@ -35,7 +35,8 @@ function insertAtCaret(text) {
 chrome.runtime.onMessage.addListener(
     function(request, sender, sendResponse) {
     if (request.act == "insert"){
-        insertAtCaret(request.text);
+        var text = request.text + request.separator
+        insertAtCaret(text);
         sendResponse({act: "done"});
     }
     else
