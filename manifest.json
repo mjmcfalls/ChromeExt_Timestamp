@@ -1,6 +1,6 @@
 {
     "name": "Add Timestamp",
-    "version": "1.0",
+    "version": "1.1",
     "description": "Context menu to add timestamp to a input field",
     "permissions": ["storage",
                     "contextMenus",
