@@ -15,7 +15,7 @@ chrome.contextMenus.onClicked.addListener(onClickHandler);
 chrome.runtime.onInstalled.addListener(function() {
     chrome.contextMenus.create({
         id: "timestamp201904",
-        title: "Test Context Menu",
+        title: "Add Timestamp",
         contexts: ["editable"],
     });
 });
